@@ -1,7 +1,7 @@
 #!usr/bin python
 #-*- coding: utf-8 -*-
 
-__doc__ =  "Functions that enable collection of the informations from the data base, their presentation and z-score calculation."
+__doc__ =  "Functions that enable collection of the informations from the database, their presentation and z-score calculation."
 __author__ = "Students of bioinformatics @ AMU, Poznan"
 
 import MySQLdb as my 
@@ -15,7 +15,7 @@ def stem(word):
     word_after = stemmer.stemWord(word)
     return word_after
 
-# Przykladowe zapytania do bazy danych
+# Examples of queries 
 def select_words(word, db_cursor):
     '''Function that selects the paragraphs with word-query.'''
     db_cursor.execute('SELECT PMID_LIST, NRALLAPPEARANCE FROM words WHERE WORD = %s', (word))
