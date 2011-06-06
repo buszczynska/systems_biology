@@ -1,0 +1,21 @@
+*****************************************************************
+
+Install git - sudo apt-get install git 
+
+*****************************************************************
+
+Set your user information 
+
+git config --global user.name 'your name'
+git config --global user.email address@email.com
+
+*****************************************************************
+
+mkdir systems_biology
+cd systems_biology/
+git init
+touch README
+git add README
+git commit -m 'first commit'
+git remote add origin git@github.com:basiek/systems_biology.git
+git push -u origin master
