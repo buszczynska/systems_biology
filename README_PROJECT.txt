@@ -1,3 +1,5 @@
+Ponizsza dokumentacja stanowi opis projektu zaliczeniowego w ramach przedmioty "Biologia Systemow" realizowanego w roku akademickim 2010/2011. Dzialanie programu zdefiniowane jest przez czynnosci opisane w punktach 1-5:
+
 1. Opis bazy danych
 
 Plik bioinfodb.sql zawiera stworzona przez nas baze danych. Zawiera ona 8 przykladowych artykulow 
