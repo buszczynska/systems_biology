@@ -1,3 +1,6 @@
+===========================================================================================================
+================================================ README ===================================================
+
 Ponizsza dokumentacja stanowi opis projektu zaliczeniowego w ramach przedmiotu "Biologia Systemow" 
 realizowanego w roku akademickim 2010/2011. Dzialanie programu zdefiniowane jest przez czynnosci 
 opisane w punktach 1-5:
@@ -7,6 +10,10 @@ opisane w punktach 1-5:
 3. Wprowadzanie danych (insertdb.py)
 4. Definicja funkcji statystycznych (statisticdb.py)
 5. Obliczenia funkcji statystycznych (run_statisticdb.py)
+
+
+----------------------------------------------------------------------------------------------------------
+-------------------------------------------1. Baza danych-------------------------------------------------
 
 Plik bioinfodb.sql zawiera stworzona przez nas baze danych. Zawiera ona 8 przykladowych artykulow 
 (archiwum plos_articles.zip), poniewaz wieksza ilosc bardzo spowalnia przeszukiwanie bazy.
@@ -64,8 +71,10 @@ mysql> show columns from wcount;
 +-------------------+-------------+------+-----+---------+-------+
 3 rows in set (0.00 sec)
  
-2. Opis programu xml_parser6c.py
-Program jest parserem do publikacji w formacie xml. Opis poszczegolnych funkcji znajduje sie w programie
+---------------------------------------------------------------------------------------------------------------
+---------------------------------------------2. Parser xml ----------------------------------------------------
+
+Program xml_parser6c.py jest parserem do publikacji w formacie xml. Opis poszczegolnych funkcji znajduje sie w programie
 bezposrednio pod linia ich definicji.
 
 Opis dzialania algorytmu:
