@@ -117,6 +117,19 @@ Wynik zapytan  kierowanych do bazy danych oraz obliczona wartosc z-score, zapisy
 Uruchomienie programu:
 > python run_statisticdb.py
 
+Program zapyta uzytkownika o:
+'Podaj slowo-query:'
+np. model
+
+'Podaj wartosc graniczna wystapien slow powyzej ktorej dane slow bedzie brane pod uwage w statystykach.
+Wartosc graniczna:'
+np. 10
+
+'Podaj skorelowane slowo, do slowa z zapytania:'
+np. sequence
+
+Jako wynik uzyskamy:
+'Z-score dla slow model i sequence wynosi: 4.02909833435'
 
 
 
