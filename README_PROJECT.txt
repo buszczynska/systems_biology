@@ -22,7 +22,7 @@ mysql> show tables;
 3 rows in set (0.00 sec)
 
 b) Tabela words zawiera informacje na temat paragrafow (PMID_LIST), w ktorych wystepuje dane slowo(WORD)
-oraz liczbe ogolna liczbe wystapien tego slowa w calej bazie danych:
+oraz ogolna liczbe wystapien tego slowa w calej bazie danych:
 mysql> show columns from words;
 +-----------------+-------------+------+-----+---------+-------+
 | Field           | Type        | Null | Key | Default | Extra |
@@ -33,8 +33,7 @@ mysql> show columns from words;
 +-----------------+-------------+------+-----+---------+-------+
 3 rows in set (0.00 sec)
 
-c) Tabela paragrahps zawiera informacje na temat listy slow (WORD_LIST) w danym paragrafie kazdego artykulu (PMID_PNR, gdzie PMID
-nr artykulu, a PNR to numer paragrafu):
+c) Tabela paragrahps zawiera informacje na temat listy slow (WORD_LIST) w danym paragrafie kazdego artykulu (PMID_PNR, gdzie PMID to nr artykulu, a PNR to numer paragrafu):
 mysql> show columns from paragraphs;
 +-----------+-------------+------+-----+---------+-------+
 | Field     | Type        | Null | Key | Default | Extra |
@@ -61,12 +60,11 @@ Program jest parserem do publikacji w formacie xml. Opis poszczegolnych funkcji 
 bezposrednio pod linia ich definicji.
 
 Opis dzialania algorytmu:
-- z pliku xml pobiera te czesci artykulu, ktore nas interesuja, np. istotny jest tytul i body artykulu,
-a nieistotne sa np. references;
-- interesujace nas czesci (wybrane w poprzednim punkcie) dzieli na paragrafy;
-- nastepnie z kazdego paragrafu usuwa stopwords (stopwords2.txt), znaki interpunkcyjne z konca i poczatku
-stringa oraz dziwne znaki zaczynajace sie na &#x, ktore wystepuja osobno, na koniec pozostale slowa
-zamienia na ich podstawy slowotworcze.
+- z pliku xml algorytm pobrany zostaje artykul (istotny jest tytul i body artykulu, a nieistotne sa np. referencje;
+- interesujace czesci (wybrane w poprzednim punkcie) dzielone sa na paragrafy;
+- z kazdego paragrafu usuwane sa stopwords (stopwords2.txt), znaki interpunkcyjne z konca i poczatku
+stringow oraz niestandardowe znaki zaczynajace sie na &#x, ktore wystepuja osobno, na koniec pozostale slowa
+zamieniane sa na ich podstawy slowotworcze
 - algorytm zwraca 3-elementowa krotke ('pmid', 'nr paragrafu', 'lista slow wystepujacych w danym paragrafie'),
 na przyklad: 
 ('16103898', 1, ['ab', 'initio', 'predict', 'transcript', 'factor', 'target', 'structur', 'knowledg'])
