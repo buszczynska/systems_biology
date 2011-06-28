@@ -1,5 +1,5 @@
-===========================================================================================================
 ================================================ README ===================================================
+===========================================================================================================
 
 Ponizsza dokumentacja stanowi opis projektu zaliczeniowego w ramach przedmiotu "Biologia Systemow" 
 realizowanego w roku akademickim 2010/2011. Dzialanie programu zdefiniowane jest przez czynnosci 
@@ -12,9 +12,8 @@ opisane w punktach 1-5:
 5. Obliczenia funkcji statystycznych (run_statisticdb.py)
 
 
-----------------------------------------------------------------------------------------------------------
--------------------------------------------1. Baza danych-------------------------------------------------
-
+-------------------------------------------1. Baza danych -------------------------------------------------
+-----------------------------------------------------------------------------------------------------------
 Plik bioinfodb.sql zawiera stworzona przez nas baze danych. Zawiera ona 8 przykladowych artykulow 
 (archiwum plos_articles.zip), poniewaz wieksza ilosc bardzo spowalnia przeszukiwanie bazy.
 Najpierw nalezy otworzyc mysql i stworzyc pusta baze danych:
@@ -71,9 +70,9 @@ mysql> show columns from wcount;
 +-------------------+-------------+------+-----+---------+-------+
 3 rows in set (0.00 sec)
  
----------------------------------------------------------------------------------------------------------------
----------------------------------------------2. Parser xml ----------------------------------------------------
 
+--------------------------------------------- 2. Parser xml ----------------------------------------------------
+----------------------------------------------------------------------------------------------------------------
 Program xml_parser6c.py jest parserem do publikacji w formacie xml. Opis poszczegolnych funkcji znajduje sie w programie
 bezposrednio pod linia ich definicji.
 
@@ -104,7 +103,10 @@ if __name__ == '__main__':
 i uruchomic program w terminalu:
 > python xml_parser6c.py
 
-3. Opis programu insertdb.py
+
+
+---------------------------------------- 3. Wprowadzanie danych ------------------------------------------------
+----------------------------------------------------------------------------------------------------------------
 W celu ulatwienia wprowadzania artykulow do bazy danych stworzylismy skrypt insertdb.py.
 Opis poszczegolnych funkcji znajduje sie w programie bezposrednio pod linia ich definicji.
 
@@ -121,12 +123,18 @@ db = my.connect(host='localhost', user='root', passwd='bioinfo5', db='bioinfodb'
 Nastepnie uruchamiammy program w terminalu:
 > python insertdb.py
 
-4. Opis programu statisticdb.py
-Program zawiera funkcje wykonujace przykladowe zapytania do bazy danych oraz obliczajace z-score
+
+
+--------------------------------- 4. Definicja funkcji statystycznych -------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
+Program statisticdb.py zawiera funkcje wykonujace przykladowe zapytania do bazy danych oraz obliczajace z-score
 2 slow. Opis poszczegolnych funkcji znajduje sie w programie bezposrednio pod linia ich definicji.
 
-5. Opis programu run_statisticdb.py
-Program umozliwia uzytkownikowi polaczenie sie z baza danych, pobieranie z niej 
+
+
+--------------------------------- 5. Obliczenia funkcji statystycznych -------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
+Program run_statisticdb.py umozliwia uzytkownikowi polaczenie sie z baza danych, pobieranie z niej 
 informacji dotyczacych interesujacego go slowa oraz obliczenie z-score.
 Wynik zapytan  kierowanych do bazy danych oraz obliczona wartosc z-score, zapisywane sa w pliku:
 "Statistics_res.txt"
