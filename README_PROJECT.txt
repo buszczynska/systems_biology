@@ -1,7 +1,7 @@
 1. Opis bazy danych
 
-Plik bioinfodb.sql zawiera stworzona przez nas baze danych. Zawiera ona 8 przykladowych artykulow (archiwum
-plos_articles.zip), poniewaz wieksza ilosc bardzo spowalnia przeszukiwanie bazy.
+Plik bioinfodb.sql zawiera stworzona przez nas baze danych. Zawiera ona 8 przykladowych artykulow 
+(archiwum plos_articles.zip), poniewaz wieksza ilosc bardzo spowalnia przeszukiwanie bazy.
 Najpierw nalezy otworzyc mysql i stworzyc pusta baze danych:
 mysql> create database bioinfo;
 Nastepnie zamykamy mysql i w terminalu wpisac polecenie:
