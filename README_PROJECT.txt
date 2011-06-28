@@ -1,6 +1,12 @@
-Ponizsza dokumentacja stanowi opis projektu zaliczeniowego w ramach przedmioty "Biologia Systemow" realizowanego w roku akademickim 2010/2011. Dzialanie programu zdefiniowane jest przez czynnosci opisane w punktach 1-5:
+Ponizsza dokumentacja stanowi opis projektu zaliczeniowego w ramach przedmiotu "Biologia Systemow" 
+realizowanego w roku akademickim 2010/2011. Dzialanie programu zdefiniowane jest przez czynnosci 
+opisane w punktach 1-5:
 
-1. Opis bazy danych
+1. Baza danych (bioinfodb.sql)
+2. Parser xml (xml_parser6c.py)
+3. Wprowadzanie danych (insertdb.py)
+4. Definicja funkcji statystycznych (statisticdb.py)
+5. Obliczenia funkcji statystycznych (run_statisticdb.py)
 
 Plik bioinfodb.sql zawiera stworzona przez nas baze danych. Zawiera ona 8 przykladowych artykulow 
 (archiwum plos_articles.zip), poniewaz wieksza ilosc bardzo spowalnia przeszukiwanie bazy.
