@@ -33,7 +33,8 @@ mysql> show columns from words;
 +-----------------+-------------+------+-----+---------+-------+
 3 rows in set (0.00 sec)
 
-c) Tabela paragrahps zawiera informacje na temat listy slow (WORD_LIST) w danym paragrafie kazdego artykulu (PMID_PNR, gdzie PMID to nr artykulu, a PNR to numer paragrafu):
+c) Tabela paragrahps zawiera informacje na temat listy slow (WORD_LIST) w danym paragrafie kazdego artykulu 
+(PMID_PNR, gdzie PMID to nr artykulu, a PNR to numer paragrafu):
 mysql> show columns from paragraphs;
 +-----------+-------------+------+-----+---------+-------+
 | Field     | Type        | Null | Key | Default | Extra |
