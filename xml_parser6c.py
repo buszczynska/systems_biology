@@ -1,7 +1,7 @@
 #!usr/bin python
 #-*- coding: utf-8 -*-
 
-__author__ = "Bioinformatyka V, UAM, Poznań"
+__author__ = "Students of bioinformatics @ AMU, Poznan"
 
 
 '''
