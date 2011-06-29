@@ -6,16 +6,12 @@ __author__ = "Bioinformatyka V, UAM, Poznań"
 
 '''
 ALGORYTM:
--z dokumentu xml usuwamy rzeczy niepotrzebne, jak linki do obrazkow, dodatkofe informacje o metodach itd.
--wybieramy następnie paragrafy
--pozostały tekst dzielimy na wyrazy, zwracamy listę 3-elementowych krotek, 
- gdzie (PMID artykułu, numer akapitu, słowo)
--usuwamy stopwords, znaki interpunkcyjne i jednoczesnie zamieniamy 
- wyrazy na ich podstawy slowotworcze
--możemy dodać funkcje, które będą z takiej listy wybierały wsz słowa 
- związane z jednym artykułem, czy akapitem, które będą liczyły częstość 
- występowania danego słowa w całym artykule, czy zwracały PMID+nr 
- akapitu wsz artykułów, gdzie pojawiło się szukane słowo.
+-z pliku xml usuwane sa wszystkie zbedne elementy z punktu widzenia data mining, takie jak: linki do obrazkow, dodatkowe informacje o metodach, itd.
+-wybierane sa dane paragrafy
+-pozostały tekst dzielony jest na wyrazy. Rezultatem dzialania tej czesci algorytmu jest lista 3-elementowych krotek, 
+ w sklad ktorej wchodza: PMID artykulu, numer akapitu, slowo
+-nastepnie usuwane sa stopwords oraz znaki interpunkcyjne; nastepuje takze zamiana wyrazow na ich podstawy slowotworcze
+-istnieje mozliwosc dodania funkcji wybierajacych wszystkie slowa zwiazane z jednym artykulem lub akapitem. Pozwala to na obliczenie czestosci wystepowania danego slowa w calym artykule oraz wartosci PMID+nr akapitu wszystkich artykulow, gdzie pojawilo sie szukane slowo. 
 '''
 
 from BeautifulSoup import BeautifulSoup as bs
