@@ -9,9 +9,12 @@ ALGORITHM:
 
 -all unwanted elements are removed from xml file (picture links, additional informations about methods, etc.)
 -particular sections are chosen
--remaining text is divided into words; as a result a list of 3-element tupples (article PMID, section number, word) is produced
+-remaining text is divided into words; as a result a list of 3-element tupples (article PMID, section number, word) 
+ is produced
 -stopwords and punctuation marks are being removed; words are being changed to their derivational bases. 
--there is a possibility of applying functions selecting all words regarding one article or section. This enables counting the frequency of the word presence in the whole article and also section PMID+nr value for all articles containing querried word.
+-there is a possibility of applying functions selecting all words regarding one article or section. 
+ This enables counting the frequency of the word presence in the whole article and also section PMID+nr value for all 
+ articles containing querried word.
 '''
 
 from BeautifulSoup import BeautifulSoup as bs
