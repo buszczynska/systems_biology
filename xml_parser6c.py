@@ -6,7 +6,8 @@ __author__ = "Bioinformatyka V, UAM, Poznań"
 
 '''
 ALGORYTM:
--z pliku xml usuwane sa wszystkie zbedne elementy z punktu widzenia data mining, takie jak: linki do obrazkow, dodatkowe informacje o metodach, itd.
+-z pliku xml usuwane sa wszystkie zbedne elementy z punktu widzenia data mining, takie jak: linki do obrazkow, 
+dodatkowe informacje o metodach, itd.
 -wybierane sa dane paragrafy
 -pozostały tekst dzielony jest na wyrazy. Rezultatem dzialania tej czesci algorytmu jest lista 3-elementowych krotek, 
  w sklad ktorej wchodza: PMID artykulu, numer akapitu, slowo
