@@ -37,17 +37,7 @@ def countall(db_cursor):
 
 def zscore(word, correlated_word, db_cursor, file):
     '''
-    Z-score pozwala obliczyc korelacje pomiedzy dwoma slowami, korzystajac ze wzoru:
-    z-score = ( ( a - ( b * c / d) ) / ( pierwiastek_z ( c * ( ( d - c ) / ( d * d ) * b) ) ) )
-    gdzie:
-    b - liczba paragrafow, w ktorych wystapilo slowo z zapytania (word) - paragrafy te bedziemy okreslac,
-    jako analizowane paragrafy 
-    a - liczba paragrafow, w ktorych wystapilo skorelowane slowo (correlated_word), paragrafy te zostaly
-    wybrane TYLKO z puli analizowanych paragrafow. Czyli wyszukujemy tych paragrafow, w ktorych wystapilo zarowno
-    wyszukiwane, jak i skorelowane slowo.
-    c - liczba paragrafow, w ktorych wystapilo skorelowane slowo (correlated_word), ale wybrana z puli WSZYSTKICH
-    paragrafow znajdujacych sie w bazie danych
-    d - ogolna liczba wszystkich paragrafow znajdujacych sie w bazie danych 
+    Enables calculation of the z-score. 
     '''
     
     word_occu = select_words(word, db_cursor)
