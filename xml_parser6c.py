@@ -12,7 +12,9 @@ dodatkowe informacje o metodach, itd.
 -pozostały tekst dzielony jest na wyrazy. Rezultatem dzialania tej czesci algorytmu jest lista 3-elementowych krotek, 
  w sklad ktorej wchodza: PMID artykulu, numer akapitu, slowo
 -nastepnie usuwane sa stopwords oraz znaki interpunkcyjne; nastepuje takze zamiana wyrazow na ich podstawy slowotworcze
--istnieje mozliwosc dodania funkcji wybierajacych wszystkie slowa zwiazane z jednym artykulem lub akapitem. Pozwala to na obliczenie czestosci wystepowania danego slowa w calym artykule oraz wartosci PMID+nr akapitu wszystkich artykulow, gdzie pojawilo sie szukane slowo. 
+-istnieje mozliwosc dodania funkcji wybierajacych wszystkie slowa zwiazane z jednym artykulem lub akapitem. 
+Pozwala to na obliczenie czestosci wystepowania danego slowa w calym artykule oraz wartosci PMID+nr akapitu 
+wszystkich artykulow, gdzie pojawilo sie szukane slowo. 
 '''
 
 from BeautifulSoup import BeautifulSoup as bs
