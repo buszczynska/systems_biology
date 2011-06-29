@@ -28,7 +28,7 @@ class XmlParser():
     
     def encode_list(self, list):
         """
-        Odszyfrowuje liste wyrazow z kodu utf-8
+        Decodes the list of words from utf-8
         """
         list = [x.encode("utf-8") for x in list]
         return list
@@ -43,7 +43,7 @@ class XmlParser():
 		
     def remove_digits(self, list):
         """
-        Usuwa liczby ktore wystepuja osobno.
+        Removes numbers, which exist separetly.
         """
         word_list = []
         for word in list:
@@ -57,9 +57,8 @@ class XmlParser():
 		
     def replace_punc(self, list):
         """
-        Wyrzuca znaki interpunk z konca i poczatku
-        stringa oraz dziwne znaki zaczynajace sie
-        na &#x ktore wystepuja osobno.
+        Removes punctuation marks from the begining and end of the string and non-standard 
+        marks starting with &#x, which exist separetly.
         """
         word_list = []
         for word in list:
@@ -71,9 +70,7 @@ class XmlParser():
 		
     def get_important_parts(self, important_parts_list, xml_doc):
         """
-        Wyszukuje tylko te elementy tekstu, ktore sa istotne z punktu widzenia
-        mozliwosci wykorzystanai zawartych tam informacji w wyszukiwaniu artykulow
-        o podobnej tematyce.
+        Gets only this elements, which are important to search informations from articles with similar subject matter.    
         """
 
         important_tags = xml_doc.findAll(important_parts_list)
@@ -84,14 +81,13 @@ class XmlParser():
         
     def get_paragraphs(self, xml_doc_important):
         """
-        Podziel xml'owy tekst na paragrafy
+        Divides xml text into sections.
         """
         return xml_doc_important.findAll('p')[0:6]
         
     def get_text_from_paragraphs(self, paragraphs_list, bs_doc):
         """
-        Zwraca liste list, gdzie kazdy element odpowiada liscie slow z 
-        danego paragrafu.
+        Returns a list of elements corresponding to list of words from particular section. 
         """
         words_in_paragraph_list = []
         i=0
@@ -115,9 +111,7 @@ class XmlParser():
 		
     def stopwords(self, stopwords_file):
         """
-        Funkcja tworzy listę z tak zwanymi: stopwords, czyli słowami, 
-        które często występują w tekście, ale nie wnoszą żadnych 
-        istotnych treści.
+        Creates a list with stopwords.
         """
         swords_file = open(stopwords_file, 'r').read().split(",")
         swords_list = []
@@ -130,7 +124,7 @@ class XmlParser():
 		
     def remove_junk(self, words_list):
 		"""
-		Funkcja wyrzuca stopwords i znaki interpunkcyjne
+		Removes stopwords and punctuation marks. 
 		"""
 		swords_list = self.stopwords('stopwords2.txt')
 		punctuation_list = self.list_of_punctuation
