@@ -1,8 +1,8 @@
 #!usr/bin python
 #-*- coding: utf-8 -*-
 
-__doc__ =  "Funkcje umozliwiajace pobieranie informacji z bazy danych, ich wyswietlanei uzytkownikowi, oraz liczenie z-score."
-__author__ = "Bioinformatyka V, UAM, Poznań"
+__doc__ =  "Functions that enable collection of the informations from the data base, their presentation and z-score calculation."
+__author__ = "Group of bioinformatics students @ AMU, Poznan"
 
 import MySQLdb as my 
 import Stemmer, sys
