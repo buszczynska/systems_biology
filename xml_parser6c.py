@@ -43,7 +43,7 @@ class XmlParser():
 		
     def remove_digits(self, list):
         """
-        Removes numbers, which exist separetly.
+        Removes numbers that exist separetly.
         """
         word_list = []
         for word in list:
@@ -58,7 +58,7 @@ class XmlParser():
     def replace_punc(self, list):
         """
         Removes punctuation marks from the begining and end of the string and non-standard 
-        marks starting with &#x, which exist separetly.
+        marks starting with &#x that exist separetly.
         """
         word_list = []
         for word in list:
@@ -70,7 +70,7 @@ class XmlParser():
 		
     def get_important_parts(self, important_parts_list, xml_doc):
         """
-        Gets only this elements, which are important to search informations from articles with similar subject matter.    
+        Gets only those elements that are important to search informations from articles with similar subject matter.    
         """
 
         important_tags = xml_doc.findAll(important_parts_list)
