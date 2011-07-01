@@ -132,9 +132,12 @@ Program statisticdb.py zawiera funkcje wykonujace przykladowe zapytania do bazy 
 --------------------------------- 5. Obliczenia funkcji statystycznych -------------------------------------------
 ------------------------------------------------------------------------------------------------------------------
 Program run_statisticdb.py umozliwia uzytkownikowi polaczenie sie z baza danych, pobieranie z niej 
-informacji dotyczacych interesujacego go slowa oraz obliczenie z-score.
+informacji dotyczacych interesujacego go slowa oraz obliczenie z-score. 
 Wynik zapytan  kierowanych do bazy danych oraz obliczona wartosc z-score, zapisywane sa w pliku:
-"Statistics_res.txt"
+"Statistics_res.txt". 
+
+Poprzednia wersja programu obliczala wartosc z-score pomiedzy poszukiwanym slowem a podanym slowem skorelowanym. Biezaca wersja umozliwia przeszukiwanie bazy arytkulow zadanym slowem i pozwala na obliczenie nowej wartosci z-score. Wartosc obliczana jest dla wszystkich slow znajdujacych sie w paragrafach gdzie wystepuje poszukiwane slowo. Wynik wyswietlany i zapisywany do pliku "Statistics_res.txt" zawiera 10 rekordow o najwyzszej wartosci z-score (skorelowane slowo, wartosc z-score, pmid_paragraf).
+
 
 Uruchomienie programu:
 > python run_statisticdb.py
@@ -147,11 +150,12 @@ np. model
 Wartosc graniczna:'
 np. 10
 
-'Podaj skorelowane slowo, do slowa z zapytania:'
-np. sequence
-
 Jako wynik uzyskamy:
-'Z-score dla slow model i sequence wynosi: 4.02909833435'
+Skorelowane slowo: synthes,
+wartosc z-score: 5.396300,
+pmid_paragraf, w ktorych wystepuja slowo szukane i slowo skorelowane: ['16103903_2', '16103903_3', '16103903_4']
+
+(...)
 
 
 
